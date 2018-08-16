@@ -1,0 +1,24 @@
+<div>
+  Rooms index
+</div>
+
+<div>
+  <ul>
+    {{#each rooms as |room| }}
+    <li>
+      <a href="/rooms/{{room.id}}">{{room.topic}}</a> | <a href="/rooms/{{room.id}}">edit</a>
+    </li>
+    {{/each}}
+  </ul>
+</div>
+
+<nav class="navbar navbar-brand">
+  <div class="container-fluid">
+    <form method="get" action="/rooms" class="navbar-form navbar-right" role="search">
+      <div class="form-group">
+        <input name="q" type="text" class="form-control" placeholder="Search"></input>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</nav>
